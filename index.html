@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>System Error</title>
+
+<style>
+body {
+  margin: 0;
+  background: black;
+  color: red;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  text-align: center;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+p {
+  color: white;
+  opacity: 0.8;
+}
+
+#monkey {
+  display: none;
+  max-width: 90%;
+}
+</style>
+</head>
+
+<body>
+
+<h1 id="title">⚠️ System Error ⚠️</h1>
+<p id="status">Diagnosing problem...</p>
+
+<img id="monkey" src="https://i.postimg.cc/PxD2fN5F/Clipped-image-20260508-213129.png">
+
+<script>
+setTimeout(() => {
+  document.getElementById("status").innerText = "Repair failed...";
+}, 2000);
+
+setTimeout(() => {
+  document.getElementById("title").style.display = "none";
+  document.getElementById("status").style.display = "none";
+  document.getElementById("monkey").style.display = "block";
+}, 4000);
+</script>
+
+</body>
+</html>
